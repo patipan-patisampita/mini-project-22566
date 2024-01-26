@@ -23,8 +23,24 @@
                     <form action="">
                         <div class="mb-3">
                             <label for="" class="form-label">ชื่อผู้สมัคร</label>
-                            <input type="text" class="form-control" name="name" placeholder="กรุณาใส่ชื่อผู้สมัคร">
+                            <input type="text" class="form-control" name="name" placeholder="กรุณาใส่ ชื่อผู้สมัคร">
                         </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">อีเมล์ผู้สมัคร</label>
+                            <input type="text" class="form-control" name="email" placeholder="กรุณาใส่ อีเมล์ผู้สมัคร">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">รหัสผ่านผู้สมัคร</label>
+                            <input type="text" class="form-control" name="password" placeholder="กรุณาใส่ รหัสผ่านผู้สมัคร">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">ยีนยันรหัสผ่านผู้สมัคร</label>
+                            <input type="text" class="form-control" name="c_password" placeholder="กรุณาใส่ ยีนยันรหัสผ่านผู้สมัคร">
+                        </div>
+                        <button type="submit" class="btn btn-primary">สมัครสมาชิก</button>
                     </form>
                 </div>
             </div>
