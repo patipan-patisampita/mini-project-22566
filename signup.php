@@ -19,6 +19,13 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text text-end">การสมัครสมาชิกเพื่อใช้บริการ ระบบออนไลน์</p>
+                    <hr>
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="" class="form-label">ชื่อผู้สมัคร</label>
+                            <input type="text" class="form-control" name="name" placeholder="กรุณาใส่ชื่อผู้สมัคร">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
