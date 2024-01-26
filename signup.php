@@ -18,7 +18,7 @@
                     <h5>ระบบลงทะเบียนผู้ใช้งาน</h5>
                 </div>
                 <div class="card-body">
-                    <p class="card-text text-end">การสมัครสมาชิกเพื่อใช้บริการ ระบบออนไลน์</p>
+                    <p class="card-text text-left">การสมัครสมาชิกเพื่อใช้บริการ ระบบออนไลน์</p>
                     <hr>
                     <form action="">
                         <div class="mb-3">
