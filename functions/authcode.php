@@ -33,3 +33,30 @@ if (isset($_POST["register_btn"])) {
         }
     }
 }
+?>
+
+<?php
+if (isset($_POST['login_btn'])) {
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+
+    $login_query = "SELECT * FROM users WHERE email='$email' and password='$password' ";
+    $login_result = mysqli_query($conn, $login_query);
+    if (mysqli_num_rows($login_result) > 0) {
+        $_SESSION["auth"] = "true";
+        $userdata = mysqli_fetch_array($login_result);
+        $username = $userdata["name"];
+        $useremail = $userdata['email'];
+
+        $_SESSION['auth_user'] = [
+            'name' => $username,
+            'email' => $useremail,
+        ];
+        $_SESSION['message'] = "Logged In Successfully";
+        header('Location:../index.php');
+    } else {
+        $_SESSION['message'] = "Invalid Credentials";
+        header('Location:../signin.php');
+    }
+}
+?>
