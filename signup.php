@@ -2,7 +2,7 @@
 
 <div class="container mt-4">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="card shadow">
                 <div class="card-header p-0">
                     <img src="assets/images/img.jpg" class="card-img-top" alt="img">
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="card shadow">
                 <div class="card-header">
                     <h5>ระบบลงทะเบียนผู้ใช้งาน</h5>
@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <p class="card-text text-left">การสมัครสมาชิกเพื่อใช้บริการ ระบบออนไลน์</p>
                     <hr>
-                    <form action="">
+                    <form action="functions/authencode.php" method="post">
                         <div class="mb-3">
                             <label for="" class="form-label">ชื่อผู้สมัคร</label>
                             <input type="text" class="form-control" name="name" placeholder="กรุณาใส่ ชื่อผู้สมัคร" required>
@@ -40,6 +40,17 @@
                             <label for="" class="form-label">ยืนยันรหัสผ่านผู้สมัคร</label>
                             <input type="password" class="form-control" name="c_password" placeholder="กรุณาใส่ ยีนยันรหัสผ่านผู้สมัคร" required>
                         </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">โทรศัพท์:</label>
+                            <input type="text" class="form-control" name="phone" placeholder="กรุณาใส่ เบอร์โทรศัพท์" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">ที่่อยู่:</label>
+                            <textarea name="address" id="" cols="30" rows="2"></textarea>
+                        </div>
+
                         <button type="submit" class="btn btn-primary">สมัครสมาชิก</button>
                     </form>
                 </div>
