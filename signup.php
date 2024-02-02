@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="" class="form-label">ยีนยันรหัสผ่านผู้สมัคร</label>
+                            <label for="" class="form-label">ยืนยันรหัสผ่านผู้สมัคร</label>
                             <input type="text" class="form-control" name="c_password" placeholder="กรุณาใส่ ยีนยันรหัสผ่านผู้สมัคร">
                         </div>
                         <button type="submit" class="btn btn-primary">สมัครสมาชิก</button>
