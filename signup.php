@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <p class="card-text text-left">การสมัครสมาชิกเพื่อใช้บริการ ระบบออนไลน์</p>
                     <hr>
-                    <form action="functions/authencode.php" method="post">
+                    <form action="functions/authcode.php" method="post">
                         <div class="mb-3">
                             <label for="" class="form-label">ชื่อผู้สมัคร</label>
                             <input type="text" class="form-control" name="name" placeholder="กรุณาใส่ ชื่อผู้สมัคร" required>
@@ -48,7 +48,7 @@
 
                         <div class="mb-3">
                             <label for="" class="form-label">ที่่อยู่:</label>
-                            <textarea name="address" id="" cols="30" rows="2"></textarea>
+                            <textarea name="address" cols="30" rows="2"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary" name="register_btn">สมัครสมาชิก</button>

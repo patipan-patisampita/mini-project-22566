@@ -9,11 +9,11 @@ if (isset($_POST["register_btn"])) {
     $address = mysqli_real_escape_string($conn, $_POST["address"]);
 
     if ($password == $c_password) {
-        $insert_query = "INSER INTO users(name,email,password,phone,address)
-        VALUES('$name','$email','$password',' $phone','$address')";
+        $insert_query = "INSERT INTO users(name,email,password,phone,address)
+        VALUES('$name','$email','$password','$phone','$address')";
         $insert_query_run = mysqli_query($conn, $insert_query);
 
-        if (mysqli_num_rows($insert_query_run) > 0) {
+        if ($insert_query_run) {
             header('Location:../signin.php');
         } 
         else {
