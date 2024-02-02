@@ -1,4 +1,12 @@
-<?php session_start(); ?> 
+<?php session_start(); ?>
+<?php
+if (isset($_SESSION["auth"])) {
+    $_SESSION['message'] = 'You are already logged In';
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <?php include("includes/header.php"); ?>
 
 <div class="container mt-4">
@@ -14,20 +22,19 @@
             </div>
         </div>
         <div class="col-md-7">
-           <?php 
-            if(isset($_SESSION["message"])) 
-            { 
+            <?php
+            if (isset($_SESSION["message"])) {
             ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Holy guacamole! </strong><?php echo $_SESSION["message"]; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole! </strong><?php echo $_SESSION["message"]; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
 
             <?php
-            unset($_SESSION ["message"]);
+                unset($_SESSION["message"]);
             }
-           ?>
-           
+            ?>
+
             <div class="card shadow">
                 <div class="card-header">
                     <h5>ระบบลงทะเบียนผู้ใช้งาน</h5>
