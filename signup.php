@@ -51,7 +51,7 @@
                             <textarea name="address" id="" cols="30" rows="2"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">สมัครสมาชิก</button>
+                        <button type="submit" class="btn btn-primary" name="register_btn">สมัครสมาชิก</button>
                     </form>
                 </div>
             </div>

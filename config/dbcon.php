@@ -5,7 +5,7 @@ $password = "";
 $dbname = "blog-app";
 
 //1.Create database connection
-$conn = mysqli_connect($host, $username, $password, $dbname);
+$register_btn = mysqli_connect($host, $username, $password, $dbname);
 
 //2.Check database connection
 if (!$conn) {
