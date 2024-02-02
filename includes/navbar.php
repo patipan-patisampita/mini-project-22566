@@ -21,9 +21,9 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="https://www.trattc.ac.th/" target="_blank">วท.ตราด</a></li>
-                        <li><a class="dropdown-item" href="https://www.vec.go.th/" target="_blank
+                        <li><a class="dropdown-item" href="https://www.vec.go.th/" target="_blank">อาชีวศึกษา</a></li>
                         <li>
-                            <hr class=" dropdown-divider">
+                            <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="https://www.moe.go.th/" target="_blank">กระทรวงศึกษาธิการ</a></li>
                     </ul>
