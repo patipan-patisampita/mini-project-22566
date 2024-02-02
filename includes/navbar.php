@@ -42,12 +42,6 @@
                 <?php
                 }
                 ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="signup.php">ลงทะเบียน</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signin.php">เข้าสู่ระบบ</a>
-                </li>
             </ul>
         </div>
     </div>
