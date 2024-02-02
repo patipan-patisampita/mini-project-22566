@@ -9,27 +9,35 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">หน้าแรก</a>
                 </li>
+
+                <?php
+                if (isset($_SESSION['auth'])) 
+                {
+                ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ลิงค์เว็บอื่นๆ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.trattc.ac.th/" target="_blank">วท.ตราด</a></li>
+                            <li><a class="dropdown-item" href="https://www.vec.go.th/" target="_blank">อาชีวศึกษา</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://www.moe.go.th/" target="_blank">กระทรวงศึกษาธิการ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="true" href="#" target="_blank">ที่ตั้ง</a>
+                    </li>
+                <?php
+                }
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="signup.php">ลงทะเบียน</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="signin.php">เข้าสู่ระบบ</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ลิงค์เว็บอื่นๆ
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://www.trattc.ac.th/" target="_blank">วท.ตราด</a></li>
-                        <li><a class="dropdown-item" href="https://www.vec.go.th/" target="_blank">อาชีวศึกษา</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="https://www.moe.go.th/" target="_blank">กระทรวงศึกษาธิการ</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true" href="#" target="_blank">ที่ตั้ง</a>
                 </li>
             </ul>
         </div>
