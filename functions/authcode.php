@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <?php
-session_start();
 include("../config/dbcon.php");
 if (isset($_POST["register_btn"])) {
     $name = mysqli_real_escape_string($conn, $_POST["name"]);
@@ -55,7 +55,7 @@ if (isset($_POST['login_btn'])) {
         ];
 
         $_SESSION['role_as'] = $role_as;
-        if($role_as){
+        if($role_as == 1){
             $_SESSION['message'] = "Welcome To Dashboard";
             header("Location: ../admin/index.php");
         }else{
