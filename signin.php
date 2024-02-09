@@ -1,10 +1,10 @@
 <?php session_start(); ?>
-<?php 
-if(isset($_SESSION["auth"])){
+<?php
+if (isset($_SESSION["auth"])) {
     $_SESSION['message'] = 'You are already logged In';
     header("Location: index.php");
     exit();
-} 
+}
 ?>
 
 <?php include("includes/header.php"); ?>

@@ -47,13 +47,21 @@ if (isset($_POST['login_btn'])) {
         $userdata = mysqli_fetch_array($login_result);
         $username = $userdata["name"];
         $useremail = $userdata['email'];
+        $role_as = $userdata['role_as'];
 
         $_SESSION['auth_user'] = [
             'name' => $username,
             'email' => $useremail,
         ];
-        $_SESSION['message'] = "Logged In Successfully";
-        header('Location:../index.php');
+
+        $_SESSION['role_as'] = $role_as;
+        if($role_as){
+            $_SESSION['message'] = "Welcome To Dashboard";
+            header("Location: ../admin/index.php");
+        }else{
+            $_SESSION['message'] = "Logged In Successfully";
+            header("Location: ../index.php");
+        }
     } else {
         $_SESSION['message'] = "Invalid Credentials";
         header('Location:../signin.php');
