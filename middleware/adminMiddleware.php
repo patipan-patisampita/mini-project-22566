@@ -7,6 +7,7 @@ if (isset($_SESSION['auth'])) {
         exit();
     } else {
         $_SESSION['message'] = 'Login to continue';
+        //redirect('../../signin.php', "Login to continue");
         // header('Location:../signin.php');
     }
 }
