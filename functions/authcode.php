@@ -1,6 +1,8 @@
 <?php session_start(); ?>
+<?php include("../config/dbcon.php"); ?>
+<?php include("myfunctions.php"); ?>
 <?php
-include("../config/dbcon.php");
+
 if (isset($_POST["register_btn"])) {
     $name = mysqli_real_escape_string($conn, $_POST["name"]);
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
@@ -55,16 +57,19 @@ if (isset($_POST['login_btn'])) {
         ];
 
         $_SESSION['role_as'] = $role_as;
-        if($role_as == 1){
-            $_SESSION['message'] = "Welcome To Dashboard";
-            header("Location: ../admin/index.php");
-        }else{
-            $_SESSION['message'] = "Logged In Successfully";
-            header("Location: ../index.php");
+        if ($role_as == 1) {
+            redirect('../admin/index.php', "Welcome To Dashboard");
+            // $_SESSION['message'] = "Welcome To Dashboard";
+            // header("Location: ../admin/index.php");
+        } else {
+            redirect('../index.php', "Logged In Successfully");
+            // $_SESSION['message'] = "Logged In Successfully";
+            // header("Location: ../index.php");
         }
     } else {
-        $_SESSION['message'] = "Invalid Credentials";
-        header('Location:../signin.php');
+        redirect('../signin.php', "Invalid Credentials");
+        // $_SESSION['message'] = "Invalid Credentials";
+        // header('Location:../signin.php');
     }
 }
 ?>

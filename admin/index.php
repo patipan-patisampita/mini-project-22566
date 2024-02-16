@@ -1,6 +1,7 @@
 <?php include('includes/header.php'); ?>
-<?php include('../middleware/adminMiddleware.php');?>
-
+<?php include('../middleware/adminMiddleware.php'); ?>
+<?php include("includes/navbar.php"); ?>
+</script>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
